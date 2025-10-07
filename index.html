@@ -1,19 +1,19 @@
-<DOCTYPE html>
-<html>
+<!DOCTYPE html>
+<html lang="en">
 <head>
-	<title>Galeria</title>
-	<meta http-equiv="Content-Type" content="text/html; charset:UTF-8"/>
-	<meta keywords="game, memory, game-javascriptm, memory-javascript"/>
-	<meta destription="Memory game in javascript"/>
-	<link rel="stylesheet" href="style.css"/>
+	<title>Memory</title>
+    <meta charset="UTF-8">
+	<meta name="keywords" content="game, memory, game-javascript, memory-javascript">
+	<meta name="description" content="Memory game in javascript">
+	<link rel="stylesheet" href="style.css">
 	<script src="memoryEngine.js" async></script>
 	<script src="jquery-3.6.0.min.js"></script>
 </head>
 	<body>
 		<section id="logInBox">
-			<div id="logIn">		
+			<div id="logIn">
 				<form id="logInForm" target="_self">
-					<input type="text" id="loginInput" name="login" maxlength="12" placeholder="Set login">
+					<input type="text" id="loginInput" name="login" maxlength="12" placeholder="Set login" aria-label="Login">
 					<input type="submit" value="Start" id="toLogIn">
 				</form>
 			</div>
@@ -21,111 +21,113 @@
 		<section id="main">
 			<section id="nav">
 				<div class="navButton" id="newGame">New game</div>
-				<!-- <div class="navButton" id="tryAgain">Try again</div> -->
-				<div class="navButton" id="player">Name: </br><span id="playerName"></span></div>
+				<div class="navButton" id="player">Name: <br><span id="playerName"></span></div>
 				<div class="navButton" id="ranking"><p id="rankingNav">Ranking: </p></div>
 			</section>
 			<section id="memoryContainer">
-				
-				<div id="gameBoard">
-					<div id="pointTab" class="tab"></div>
-					<div id="timeTab" class="tab"></div>
-					<div class="memoryElement">
-						<div class="memoryElementInner">
-							<div class="memoryElementBack"></div>
-							<div class="memoryElementFront"><img></div>
-						</div>
-					</div>
-					<div class="memoryElement">
-						<div class="memoryElementInner">
-							<div class="memoryElementBack"></div>
-							<div class="memoryElementFront"><img></div>
-						</div>
-					</div>
-					<div class="memoryElement">
-						<div class="memoryElementInner">
-							<div class="memoryElementBack"></div>
-							<div class="memoryElementFront"><img></div>
-						</div>
-					</div>
-					<div class="memoryElement">
-						<div class="memoryElementInner">
-							<div class="memoryElementBack"></div>
-							<div class="memoryElementFront"><img></div>
-						</div>
-					</div>
-					<div class="memoryElement">
-						<div class="memoryElementInner">
-							<div class="memoryElementBack"></div>
-							<div class="memoryElementFront"><img></div>
-						</div>
-					</div>
-					<div class="memoryElement">
-						<div class="memoryElementInner">
-							<div class="memoryElementBack"></div>
-							<div class="memoryElementFront"><img></div>
-						</div>
-					</div>
-					<div class="memoryElement">
-						<div class="memoryElementInner">
-							<div class="memoryElementBack"></div>
-							<div class="memoryElementFront"><img></div>
-						</div>
-					</div>
-					<div class="memoryElement">
-						<div class="memoryElementInner">
-							<div class="memoryElementBack"></div>
-							<div class="memoryElementFront"><img></div>
-						</div>
-					</div>
-					<div class="memoryElement">
-						<div class="memoryElementInner">
-							<div class="memoryElementBack"></div>
-							<div class="memoryElementFront"><img></div>
-						</div>
-					</div>
-					<div class="memoryElement">
-						<div class="memoryElementInner">
-							<div class="memoryElementBack"></div>
-							<div class="memoryElementFront"><img></div>
-						</div>
-					</div>
-					<div class="memoryElement">
-						<div class="memoryElementInner">
-							<div class="memoryElementBack"></div>
-							<div class="memoryElementFront"><img></div>
-						</div>
-					</div>
-					<div class="memoryElement">
-						<div class="memoryElementInner">
-							<div class="memoryElementBack"></div>
-							<div class="memoryElementFront"><img></div>
-						</div>
-					</div>
-					<div class="memoryElement">
-						<div class="memoryElementInner">
-							<div class="memoryElementBack"></div>
-							<div class="memoryElementFront"><img></div>
-						</div>
-					</div>
-					<div class="memoryElement">
-						<div class="memoryElementInner">
-							<div class="memoryElementBack"></div>
-							<div class="memoryElementFront"><img></div>
-						</div>
-					</div>
-					<div class="memoryElement">
-						<div class="memoryElementInner">
-							<div class="memoryElementBack"></div>
-							<div class="memoryElementFront"><img></div>
-						</div>
-					</div>
-					<div class="memoryElement">
-						<div class="memoryElementInner">
-							<div class="memoryElementBack"></div>
-							<div class="memoryElementFront"><img></div>
-						</div>
-					</div> 
+				<div id="game-board">
+					<div class="game-tab">
+                        <div id="pointTab" class="tab">A</div>
+                        <div id="timeTab" class="tab">A</div>
+                    </div>
+					<div class="game-board-elements">
+                        <div class="memory-element">
+                            <div class="memoryElementInner">
+                                <div class="memoryElementBack"></div>
+                                <div class="memoryElementFront"><img alt="Memory card" src=""></div>
+                            </div>
+                        </div>
+                        <div class="memory-element">
+                            <div class="memoryElementInner">
+                                <div class="memoryElementBack"></div>
+                                <div class="memoryElementFront"><img alt="Memory card" src=""></div>
+                            </div>
+                        </div>
+                        <div class="memory-element">
+                            <div class="memoryElementInner">
+                                <div class="memoryElementBack"></div>
+                                <div class="memoryElementFront"><img alt="Memory card" src=""></div>
+                            </div>
+                        </div>
+                        <div class="memory-element">
+                            <div class="memoryElementInner">
+                                <div class="memoryElementBack"></div>
+                                <div class="memoryElementFront"><img alt="Memory card" src=""></div>
+                            </div>
+                        </div>
+                        <div class="memory-element">
+                            <div class="memoryElementInner">
+                                <div class="memoryElementBack"></div>
+                                <div class="memoryElementFront"><img alt="Memory card" src=""></div>
+                            </div>
+                        </div>
+                        <div class="memory-element">
+                            <div class="memoryElementInner">
+                                <div class="memoryElementBack"></div>
+                                <div class="memoryElementFront"><img alt="Memory card" src=""></div>
+                            </div>
+                        </div>
+                        <div class="memory-element">
+                            <div class="memoryElementInner">
+                                <div class="memoryElementBack"></div>
+                                <div class="memoryElementFront"><img alt="Memory card" src=""></div>
+                            </div>
+                        </div>
+                        <div class="memory-element">
+                            <div class="memoryElementInner">
+                                <div class="memoryElementBack"></div>
+                                <div class="memoryElementFront"><img alt="Memory card" src=""></div>
+                            </div>
+                        </div>
+                        <div class="memory-element">
+                            <div class="memoryElementInner">
+                                <div class="memoryElementBack"></div>
+                                <div class="memoryElementFront"><img alt="Memory card" src=""></div>
+                            </div>
+                        </div>
+                        <div class="memory-element">
+                            <div class="memoryElementInner">
+                                <div class="memoryElementBack"></div>
+                                <div class="memoryElementFront"><img alt="Memory card" src=""></div>
+                            </div>
+                        </div>
+                        <div class="memory-element">
+                            <div class="memoryElementInner">
+                                <div class="memoryElementBack"></div>
+                                <div class="memoryElementFront"><img alt="Memory card" src=""></div>
+                            </div>
+                        </div>
+                        <div class="memory-element">
+                            <div class="memoryElementInner">
+                                <div class="memoryElementBack"></div>
+                                <div class="memoryElementFront"><img alt="Memory card" src=""></div>
+                            </div>
+                        </div>
+                        <div class="memory-element">
+                            <div class="memoryElementInner">
+                                <div class="memoryElementBack"></div>
+                                <div class="memoryElementFront"><img alt="Memory card" src=""></div>
+                            </div>
+                        </div>
+                        <div class="memory-element">
+                            <div class="memoryElementInner">
+                                <div class="memoryElementBack"></div>
+                                <div class="memoryElementFront"><img alt="Memory card" src=""></div>
+                            </div>
+                        </div>
+                        <div class="memory-element">
+                            <div class="memoryElementInner">
+                                <div class="memoryElementBack"></div>
+                                <div class="memoryElementFront"><img alt="Memory card" src=""></div>
+                            </div>
+                        </div>
+                        <div class="memory-element">
+                            <div class="memoryElementInner">
+                                <div class="memoryElementBack"></div>
+                                <div class="memoryElementFront"><img alt="Memory card" src=""></div>
+                            </div>
+                        </div>
+                    </div>
 				</div>
 			</section>
 		</section>
